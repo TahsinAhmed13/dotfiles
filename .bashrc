@@ -63,4 +63,4 @@ function get_git_prompt()
 }
 
 # PROMPTS
-PS1='\n[\u@\h \W$(get_git_prompt)]\n '
+PS1='\n\e[91m[\e[92m\u\e[93m@\e[94m\h \e[95m\W\e[97m$(get_git_prompt)\e[91m]\e[0m\n '
