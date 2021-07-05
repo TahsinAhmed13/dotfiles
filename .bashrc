@@ -5,11 +5,16 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# ENVIRONMENT VARIABLES
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+
 # ALIASES
-alias ls="ls --color --group-directories-first --human-readable"
-alias grep="grep --color --line-number"
+alias ls="ls --color=auto --group-directories-first --human-readable"
+alias grep="grep --color=auto --line-number"
 alias cat="cat -n"
-alias less="less -R -N"
+alias less="less -R -N --use-color -Dd+r$Du+b"
+alias ip="ip -color=auto"
+alias dmesg="dmesg --color=always"
 alias h="history"
 alias hc="cat /dev/null > $HOME/.bash_history"
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
